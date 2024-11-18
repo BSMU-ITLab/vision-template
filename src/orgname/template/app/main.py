@@ -1,14 +1,8 @@
-from bsmu.vision.app import App
-
-from orgname.template.app import __title__, __version__
-
-
-class TemplateApp(App):
-    pass
+from orgname.template.app import TemplateApp
 
 
 def run_app():
-    app = TemplateApp(__title__, __version__)
+    app = TemplateApp()
     app.run()
 
 

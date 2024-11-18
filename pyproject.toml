@@ -1,5 +1,5 @@
 [build-system]
-requires = [ 'setuptools >= 61.0' ]
+requires = [ 'setuptools >= 69.0' ]
 build-backend = 'setuptools.build_meta'
 
 [project]
@@ -27,7 +27,7 @@ classifiers = [
     'Topic :: Software Development :: Version Control :: Git',
 ]
 dependencies = [
-    'bsmu.vision[common,build] @ git+https://github.com/BSMU-ITLab/vision.git@v0.20.2',
+    'bsmu.vision[common,build] @ git+https://github.com/BSMU-ITLab/vision.git@v0.27.1',
 ]
 
 [project.urls]
@@ -42,10 +42,10 @@ orgname-template-c = 'orgname.template.app.main:run_app'
 orgname-template = 'orgname.template.app.main:run_app'
 
 [tool.setuptools.dynamic]
-version = { attr = 'orgname.template.app.version.__version__' }
+version = { attr = 'orgname.template.__version__' }
 
 [tool.setuptools.packages.find]
 where = [ 'src' ]
 
 [tool.setuptools.package-data]
-'*' = [ '*.conf.yaml' ]
+'*' = [ '**/*.conf.yaml' ]
